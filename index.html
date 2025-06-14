@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Hand+Pre:wght@400..700&display=swap');
+        
 
         *{
             margin: 0;
             list-style: none;
             text-decoration: none;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
         }
         .sidebar{
             position: fixed;
@@ -22,23 +25,23 @@
             padding: 10px;
             color: aliceblue;
             width: 510px;
+            height: 1000px;
             align-items: center;
             padding-left: 180px;
 
         }
         .home{
+            display: flex;
             font-size: 32px;    
-            font-family: "Edu NSW ACT Hand Pre", cursive;
+            font-family: Arial, Helvetica, sans-serif;
             padding-bottom: 10px;
-        }
-        nav{
         }
         .nav-list{
             display: flex;
             flex-direction: column;
             gap: 20px;
-            font-family: "Edu NSW ACT Hand Pre", cursive;
             font-size: 24px;
+            padding-left: 0; 
         }
         .links-list{
             color: aliceblue;
@@ -52,7 +55,7 @@
             width: 200px;
             height: 50px;
             border-radius: 30px;
-            font-size: 24px;
+            font-size: 17px;
             font-weight: 700;
         }
         .feed{
@@ -63,18 +66,131 @@
             height: 1000px;
             width: 570px;
             margin-left: 700px;  
-            border-left: 2px solid rgb(175, 175, 175);
-            border-right: 2px solid rgb(175, 175, 175);  
+            position: relative;
+            border-left: 2px solid rgba(175, 175, 175, 0.295);  
         }
-        
+        .right-panel {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 740px;
+            height: 100vh;
+            border-left: 2px solid rgba(175, 175, 175, 0.295);
+            background-color: black;
+            padding-left: 40px;
+            padding-top: 5px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .button-search {
+            border: 2px solid rgba(175, 175, 175, 0.295);
+            background-color: #000000;
+            padding: 10px;
+            width: 296px;
+            border-radius: 25px;
+            font-size: 16px;
+            color: white;
+        }   
+        .right-painel-list{
+            width: 296px;
+        }
+        .content-block01{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 296px;
+            height: 120px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid rgba(175, 175, 175, 0.295);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .title-block01{
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        .paragraph-block01{
+            font-size: 15px;
+            padding-bottom: 10px;
+            
+        }
+        .subscription-button{
+            border: none;
+            background-color: rgb(0, 140, 255);
+            color: white;
+            font-size: 16px;
+            width: 100px;
+            height: 35px;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+        .content-block02{
+            width: 296px;
+            height: 420px;
+            border-radius: 10px;
+            border: 2px solid rgba(175, 175, 175, 0.295);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .trending-topics{
+            color: rgb(62, 65, 68);
+        }
+        .itens-list-block02{
+            font-weight: bold;
+        }
+        .number-posts-block02{
+            color: rgb(62, 65, 68);
+        }
+        .link-Show-more{
+            color: rgb(72, 125, 204);
+        }
+        .content-block03{
+            width: 296px;
+            height: 210px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid rgba(175, 175, 175, 0.295);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .title-block03{
+            font-size: 20px;
+            font-weight: bold;
+            padding-bottom: 20px;
+        }
+        .profiles{
+            display: flex;
+            font-weight: bold;
+            margin-bottom: 10px;
+            gap: 5px;
+            
+        }
+        .icon-profile{
+            width: 40px;
+            border-radius: 30px;
+        }
+        .verificado{
+            width: 20px;
+            height: 20px;
+        }
+        .arroba-name{
+            color: rgb(62, 65, 68);
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         
         <nav>
+            <div class="home" >Home</div>
             <ul class="nav-list" >
-                <div class="home" >Home</div>
+                
                 <li><a class="links-list" href="">Pagina inicial</a></li>
                 <li><a class="links-list" href="">Explorar</a></li>
                 <li><a class="links-list" href="">Notificações</a></li>
@@ -89,6 +205,7 @@
                 <li><a class="links-list" href="">Perfil</a></li>
                 <li><a class="links-list" href="">Mais</a></li>
                 <li><button class="button-post" >Postar</button></li>
+                
             </ul>
         </nav>
     </div>
@@ -96,9 +213,66 @@
     <div class="feed" >
         dkjhgdhsajds
     </div>
-    
-    <footer>
 
-    </footer>
+    <div class="right-panel" >
+        <div class="right-painel-list" >
+            <ul class="right-painel-itens" > 
+                <input class="button-search" type="text" placeholder="Buscar" >
+            </ul>
+        </div>
+        <div class="content-block01" >
+            <p class="title-block01" >Assine o Premium</p>
+            <p class="paragraph-block01" >Assine para desbloquear novos recursos e, se elegível, receba uma parte da receita.</p>
+            <button class="subscription-button" >Assinar</button>
+        </div>
+        
+        <div class="content-block02" >
+            <p class="title-block01" >O que está acontecendo</p>
+                
+            <div class="list-block02" >
+                    <p class="trending-topics" >Só no X · Assunto do Momento</p>
+                    <p class="itens-list-block02" >BEYOND THE CALL OF DUTY</p>
+                    <p class="number-posts-block02" >31,6 mil posts</p>
+                    
+                </div>
+
+                <div>
+                    <p class="trending-topics" >Assunto do Momento</p>
+                    <p class="itens-list-block02" >#TheNextPrinceEP7</p>
+                    <p class="number-posts-block02" >31 mil posts</p>
+                </div>
+                <div>
+                    <p class="trending-topics" >Assunto do Momento</p>
+                    <p class="itens-list-block02" >#VoleiNoSportTV</p>
+                    <p class="trending-topics" >Assuntos do Momento</p>
+                </div>
+                <div>
+                    <p class="trending-topics" >Assunto do Momento</p>
+                    <p class="itens-list-block02" >LGBT</p>
+                    <p class="number-posts-block02" >69,9 mil posts</p>
+                </div>
+                <p ><a href="" class="link-Show-more">Mostrar mais</a></p>
+        </div>
+        
+        <div class="content-block03" >
+            <p class="title-block03" >Quem seguir</p>
+            <div class="profiles" >
+                <img class="icon-profile" src="imagens/notch-icon.jpg" alt="">
+                <p>Notch <br><span class="arroba-name" >@notch</span></p>
+                <img class="verificado" src="imagens/icon-verificado.png" alt="">
+            </div>
+            <div class="profiles" >
+                <img class="icon-profile" src="imagens/bolsonaro-icon.jpg" alt="">
+                <p>Jair M. Bolsonaro <br><span class="arroba-name" >@jairbolsonaro</span></p>
+                <img class="verificado" src="imagens/icon-verificado.png" alt="">
+            </div>
+            <div class="profiles" >
+                <img class="icon-profile" src="imagens/cj-icon.jpg" alt="">
+                <p>cj <br><span class="arroba-name" >@cj_angolano</span></p>
+                <img class="verificado" src="imagens/icon-verificado.png" alt="">
+            </div>
+            <p ><a href="" class="link-Show-more">Mostrar mais</a></p>
+        </div>
+    </div>
 </body>
 </html>
