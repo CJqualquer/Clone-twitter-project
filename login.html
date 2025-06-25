@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        body{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        .logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .logo img {
+            width: 330px;
+            height: 330px;
+        }
+
+        .container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50vw;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+            background-color: black;
+        }
+        .titulo{
+            margin-left: 230px;
+            font-size: 60px;
+            font-family: "Inter", sans-serif;
+        }
+        .subtitulo{
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+        .logins{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .login-google{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 25px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(62, 65, 68);
+        }
+        .login-apple{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 25px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(62, 65, 68);
+            margin-bottom: 10px;
+        }
+        img{
+            width: 18px;
+            height: 18px;
+        }
+        .create-account{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: 700;
+            width: 320px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+            background-color:#1A8CD8;
+            color: rgb(255, 255, 255);
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .termos{
+            font-size: 11px;
+            color: rgb(111, 114, 117);
+            margin-bottom: 60px;
+        }
+        .par{
+            margin-right: 170px;
+            font-weight: 600;
+        }
+        .enter-account{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            height: 40px;
+            padding: 10px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+            color:#1A8CD8;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0);
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        a{
+            color:#1A8CD8;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            color: rgb(62, 65, 68);
+            font-size: 13px;
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        footer a {
+            color: rgb(111, 114, 117);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #1A8CD8;
+        }
+        .modal {
+  display: none; /* esconde por padrão */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* fundo escuro translúcido */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #000;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.modal-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  background-color: #111;
+  color: white;
+}
+
+.modal-login-button {
+  background-color: #1A8CD8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="imagens/home.png" alt="">
+    </div>
+
+    <div class="container">
+      <h1 class="titulo">Acontecendo agora</h1>
+
+      <div class="subtitulo">
+        <h2>Inscreva-se hoje</h2>
+      </div>
+
+      <div class="logins">
+        <div class="login-google">
+          <img src="imagens/icon-google.png" alt="">Inscrever-se no Google
+        </div>
+        <div class="login-apple">
+          <img src="imagens/icon-apple.png" alt="">Inscrever-se com Apple
+        </div>
+      </div>
+
+      <div>OU</div>
+
+      <button class="create-account">Criar conta</button>
+
+      <div class="termos">
+        Ao se inscrever, você concorda com os <a href="#">Termos de Serviço</a> e <br> 
+        a <a href="#">Política de Privacidade</a>, incluindo o <a href="#">Uso de Cookies</a>.
+      </div>
+
+      <div class="par">Já tem uma conta?</div>
+      <button class="enter-account">Entrar</button>
+    </div>
+  </div>
+ <footer>
+  <a href="#">Sobre</a>|
+  <a href="#">Baixe o aplicativo do X</a>|
+  <a href="#">Grok</a>|
+  <a href="#">Central de Ajuda</a>|
+  <a href="#">Termos de Serviço</a>|
+  <a href="#">Política de Privacidade</a>|
+  <a href="#">Política de cookies</a>|
+  <a href="#">Acessibilidade</a>|
+  <a href="#">Informações de anúncios</a>|
+  <a href="#">Blog</a>|
+  <a href="#">Carreiras</a>|
+  <a href="#">Recursos da marca</a>|
+  <a href="#">Publicidade</a>|
+  <a href="#">Marketing</a>|
+  <a href="#">X para Empresas</a>|
+  <a href="#">Desenvolvedores</a>|
+  <a href="#">Diretório</a>|
+  <a href="#">Configurações</a>|
+  <a href="#">© 2025 X Corp.</a>|
+</footer>
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Entrar na conta</h2>
+    <input type="text" placeholder="Usuário ou E-mail" class="modal-input">
+    <input type="password" placeholder="Senha" class="modal-input">
+    <button class="modal-login-button">Entrar</button>
+  </div>
+</div>  
+<script>
+  const entrarBtn = document.querySelector(".enter-account");
+  const modal = document.getElementById("loginModal");
+  const closeBtn = document.querySelector(".close-button");
+
+  entrarBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fecha o modal ao clicar fora da caixinha
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
