@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css-login.css">
+
+</head>
+<body>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="images/home.png" alt="">
+    </div>
+
+    <div class="container">
+      <h1 class="titulo">Acontecendo agora</h1>
+
+
+        <h2 class="subtitulo">Inscreva-se hoje</h2>
+
+
+      <div class="logins">
+        <div class="login-google">
+          <img src="images/icon-google.png" alt="">Inscrever-se no Google
+        </div>
+        <div class="login-apple">
+          <img src="images/icon-apple.png" alt="">Inscrever-se com Apple
+        </div>
+      </div>
+
+      <div>OU</div>
+
+      <button class="create-account">Criar conta</button>
+
+      <div class="termos">
+        Ao se inscrever, você concorda com os <a href="#">Termos de Serviço</a> e <br> 
+        a <a href="#">Política de Privacidade</a>, incluindo o <a href="#">Uso de Cookies</a>.
+      </div>
+
+      <div class="par">Já tem uma conta?</div>
+      <button class="enter-account">Entrar</button>
+    </div>
+  </div>
+ <footer>
+  <a href="#">Sobre</a>|
+  <a href="#">Baixe o aplicativo do X</a>|
+  <a href="#">Grok</a>|
+  <a href="#">Central de Ajuda</a>|
+  <a href="#">Termos de Serviço</a>|
+  <a href="#">Política de Privacidade</a>|
+  <a href="#">Política de cookies</a>|
+  <a href="#">Acessibilidade</a>|
+  <a href="#">Informações de anúncios</a>|
+  <a href="#">Blog</a>|
+  <a href="#">Carreiras</a>|
+  <a href="#">Recursos da marca</a>|
+  <a href="#">Publicidade</a>|
+  <a href="#">Marketing</a>|
+  <a href="#">X para Empresas</a>|
+  <a href="#">Desenvolvedores</a>|
+  <a href="#">Diretório</a>|
+  <a href="#">Configurações</a>|
+  <a href="#">© 2025 X Corp.</a>|
+</footer>
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>Entrar na conta</h2>
+    <input type="email" placeholder="Usuário ou E-mail" class="modal-input">
+    <input type="password" placeholder="Senha" class="modal-input">
+    <button class="modal-login-button">Entrar</button>
+  </div>
+</div>  
+
+<div id="registerModal">
+  <div class="create-account-Content">
+    <span class="close-button">&times;</span>
+    <h2>Criar sua conta</h2>
+    <input id="email" class="input-register" type="email" placeholder="E-mail">
+    <input id="password" class="input-register" type="password" placeholder="Senha">
+    <input id="name" class="input-register" type="text" placeholder="Nome"> 
+    <input id="imgurl" class="input-register" type="text" placeholder="Foto de perfil" >
+    <input id="username" class="input-register" type="text" placeholder="Seu @" >
+    <button id="criar" class="modal-create-login-button">Criar</button>
+  </div>
+</div>  
+
+<script src="js-login.js"></script>
+</body>
+</html>
