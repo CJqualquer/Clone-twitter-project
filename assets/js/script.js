@@ -14,7 +14,7 @@ document.getElementById("btnPostar").addEventListener("click", function () {
             
             postDiv.innerHTML = `
                 <div class="post-header">
-                    <img src="imagens/default-profile.jpg" class="profile-pic">
+                    <img src="imgs/default-profile.jpg" class="profile-pic">
                     <div class="user-info">
                         <span class="username">Você</span>
                         <span class="user-handle">@usuario</span>
