@@ -37,10 +37,10 @@
     let image = document.getElementById('imgurl').value
     let username = document.getElementById('username').value
 
-    
-      axios.post('http://25.53.157.242:8080/auth/register',{
+
+      axios.post('http://localhost:8080/api/user/register',{
         username: username,
-        password: password,
+        passwd: password,
         email: email,
         imgURL: image,
         name: name 
@@ -49,8 +49,7 @@
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     }
-  })
-      .then(response => {
-        console.log('sucesso')
+  }).then(response => {
+        console.log("sucesso!")
       })
   })
