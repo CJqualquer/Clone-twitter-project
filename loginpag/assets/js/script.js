@@ -37,19 +37,13 @@
     let image = document.getElementById('imgurl').value
     let username = document.getElementById('username').value
 
-
-      axios.post('http://localhost:8080/api/user/register',{
+    fetch("http://localhost:8080/api/user/register", {method: "POST",
+      body: JSON.stringify({
         username: username,
-        passwd: password,
+        name: name,
         email: email,
-        imgURL: image,
-        name: name 
-      },{
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    }
-  }).then(response => {
-        console.log("sucesso!")
+        passwd: password,
+        imgURL: image
       })
+    })
   })
